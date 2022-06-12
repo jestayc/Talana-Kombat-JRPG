@@ -3,14 +3,15 @@ import sys
 import itertools
 
 while True:
+    print("\n")
     print("**********************")
     print("* Talana Kombat JRPG *")
     print("**********************")
     print("Tenemos 3 combates")
-    print("combate1")
-    print("combate2")
-    print("combate3")
-
+    print("- combate1")
+    print("- combate2")
+    print("- combate3")
+    print("\n")
     json = input('¿Qué combate prefieres? o escribe exit para salir >>> ')
     json = json.lower()
     if (json != "exit"):
@@ -38,7 +39,7 @@ while True:
 
             com_j1 = []
             com_j2 = []
-
+            print("\n")
             #Creamos lista de movimientos Jugador 1
             for valor_a, valor_b, valor_c, valor_d in itertools.zip_longest(movimientos_j1, golpes_j1, movimientos_j2, golpes_j2):
                 if(valor_a == None):
@@ -175,6 +176,7 @@ while True:
                     print(ganador)
                     print(player2[1] + str(progress(player2[0], 6)))
                     print(player1[1] + str(progress(0, 6)))
+                    print("\n")
                     break
 
                 if(player2[0] <= 0):
@@ -182,6 +184,7 @@ while True:
                     print(ganador)
                     print(player1[1] + str(progress(player1[0], 6)))
                     print(player2[1] + str(progress(0, 6)))
+                    print("\n")
                     break
         except:
             print("Aprovechen el Bug y vuelvan a Intentarlo xD")
